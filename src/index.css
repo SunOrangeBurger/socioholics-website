@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surf-blue: #3B5B8A;
+  --color-surf-blue-light: #4A6F9E;
+  --color-surf-blue-hover: #2E486E;
+  --color-saltwater-sky: #D0E2F2;
+  --color-saltwater-sky-light: #F0F6FC;
+  --color-lab-canvas: #F8FAFC;
+  --color-lab-obsidian: #0B0F17;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "SF UI Text", "SF UI Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  --surf-blue: #3B5B8A;
+  --saltwater-sky: #D0E2F2;
+  --lab-canvas: #F8FAFC;
+  --hairline-border: rgba(59, 91, 138, 0.18);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "SF UI Text", "SF UI Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.011em;
+}
+
+body {
+  margin: 0;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Precision Hairline Technical Grid Pattern */
+.bg-lab-grid {
+  background-image: 
+    linear-gradient(to right, rgba(59, 91, 138, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 91, 138, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-lab-dot-grid {
+  background-image: radial-gradient(rgba(59, 91, 138, 0.14) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-dark-grid {
+  background-image: 
+    linear-gradient(to right, rgba(208, 226, 242, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(208, 226, 242, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Corner Crosshairs for Lab Technical Cards */
+.corner-crosshair {
+  position: relative;
+}
+.corner-crosshair::before,
+.corner-crosshair::after {
+  content: "+";
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #3B5B8A;
+  opacity: 0.6;
+  pointer-events: none;
+  line-height: 1;
+}
+.corner-crosshair::before {
+  top: 6px;
+  left: 6px;
+}
+.corner-crosshair::after {
+  bottom: 6px;
+  right: 6px;
+}
+
+/* Subtle Apple-style scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 91, 138, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 91, 138, 0.4);
+}

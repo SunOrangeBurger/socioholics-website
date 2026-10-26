@@ -1,0 +1,6 @@
+{
+  "name": "Socioholics — Health-Tech & Medi-Awareness Club | PESU EC Campus",
+  "description": "Official portal of Socioholics, PES University Electronic City Campus. Pioneering biomedical hardware, health informatics, and clinical awareness where engineering meets human physiology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
